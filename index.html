@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHAFRAN Restauracja</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">SHAFRAN</div>
+          <nav class="desktop-nav">
+            <ul>
+              <li>
+                <a href="#menu" class="nav-link" data-translate="menu">Menu</a>
+              </li>
+              <li>
+                <a href="#about" class="nav-link" data-translate="about"
+                  >O Nas</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="nav-link" data-translate="contact"
+                  >Kontakt</a
+                >
+              </li>
+            </ul>
+            <div class="language-dropdown">
+              <button class="language-btn"><i class="fas fa-globe"></i></button>
+              <div class="language-dropdown-content">
+                <a href="#" data-lang="pl">Polski</a>
+                <a href="#" data-lang="uz">O'zbekcha</a>
+                <a href="#" data-lang="ru">Русский</a>
+              </div>
+            </div>
+          </nav>
+          <div class="mobile-nav-toggle">
+            <div class="language-dropdown mobile-language">
+              <button class="language-btn"><i class="fas fa-globe"></i></button>
+              <div class="language-dropdown-content">
+                <a href="#" data-lang="pl">Polski</a>
+                <a href="#" data-lang="uz">O'zbekcha</a>
+                <a href="#" data-lang="ru">Русский</a>
+              </div>
+            </div>
+            <button class="menu-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu">
+          <nav>
+            <ul>
+              <li>
+                <a href="#menu" class="nav-link" data-translate="menu">Menu</a>
+              </li>
+              <li>
+                <a href="#about" class="nav-link" data-translate="about"
+                  >O Nas</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="nav-link" data-translate="contact"
+                  >Kontakt</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <h1 data-translate="title">SHAFRAN RESTAURACJA</h1>
+        <p data-translate="subtitle">Tradycyjne smaki kuchni uzbeckiej</p>
+        <button class="btn btn-primary" data-translate="viewMenu">
+          Zobacz Menu
+        </button>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <h2 class="section-title" data-translate="menu">Menu</h2>
+
+        <!-- Desktop Menu -->
+        <div class="desktop-menu">
+          <div class="tabs">
+            <div class="tabs-list">
+              <button
+                class="tab-btn active"
+                data-tab="soups"
+                data-translate="soups"
+              >
+                Zupy
+              </button>
+              <button class="tab-btn" data-tab="sets" data-translate="sets">
+                Zestawy
+              </button>
+              <button
+                class="tab-btn"
+                data-tab="mainDishes"
+                data-translate="mainDishes"
+              >
+                Danie Główne
+              </button>
+              <button class="tab-btn" data-tab="grill" data-translate="grill">
+                Grill
+              </button>
+              <button class="tab-btn" data-tab="salads" data-translate="salads">
+                Sałatki
+              </button>
+              <button
+                class="tab-btn"
+                data-tab="breakfast"
+                data-translate="breakfast"
+              >
+                Śniadanie
+              </button>
+              <button class="tab-btn" data-tab="bakery" data-translate="bakery">
+                Piekarnia
+              </button>
+              <button
+                class="tab-btn"
+                data-tab="desserts"
+                data-translate="desserts"
+              >
+                Desery
+              </button>
+              <button
+                class="tab-btn"
+                data-tab="beverages"
+                data-translate="drinks"
+              >
+                Napoje
+              </button>
+              <button class="tab-btn" data-tab="sides" data-translate="sides">
+                Dodatki
+              </button>
+            </div>
+
+            <div class="tab-content active" id="soups-content">
+              <div class="menu-grid" id="soups-grid"></div>
+            </div>
+
+            <div class="tab-content" id="sets-content">
+              <div class="menu-grid" id="sets-grid"></div>
+            </div>
+
+            <div class="tab-content" id="mainDishes-content">
+              <div class="menu-grid" id="mainDishes-grid"></div>
+            </div>
+
+            <div class="tab-content" id="grill-content">
+              <div class="menu-grid" id="grill-grid"></div>
+            </div>
+
+            <div class="tab-content" id="salads-content">
+              <div class="menu-grid" id="salads-grid"></div>
+            </div>
+
+            <div class="tab-content" id="breakfast-content">
+              <div class="menu-grid" id="breakfast-grid"></div>
+            </div>
+
+            <div class="tab-content" id="bakery-content">
+              <div class="menu-grid" id="bakery-grid"></div>
+            </div>
+
+            <div class="tab-content" id="desserts-content">
+              <div class="menu-grid" id="desserts-grid"></div>
+            </div>
+
+            <div class="tab-content" id="beverages-content">
+              <div class="beverages-grid">
+                <div class="beverages-column">
+                  <h3 data-translate="coffee">Kawa</h3>
+                  <div id="coffee-list"></div>
+                </div>
+                <div class="beverages-column">
+                  <h3 data-translate="lemonades">Lemoniady</h3>
+                  <div id="lemonades-list"></div>
+                  <h3 data-translate="cocktails" class="mt-8">Koktajle</h3>
+                  <div id="cocktails-list"></div>
+                </div>
+                <div class="beverages-column">
+                  <h3 data-translate="drinks">Napoje</h3>
+                  <div id="drinks-list"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="sides-content">
+              <div class="menu-grid" id="sides-grid"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu - Accordion -->
+        <div class="mobile-menu-accordion">
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="soups">
+                <span data-translate="soups">Zupy</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="soups-accordion"></div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="sets">
+                <span data-translate="sets">Zestawy</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="sets-accordion"></div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="mainDishes">
+                <span data-translate="mainDishes">Danie Główne</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="mainDishes-accordion"></div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="grill">
+                <span data-translate="grill">Grill</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="grill-accordion"></div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="salads">
+                <span data-translate="salads">Sałatki</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="salads-accordion"></div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="breakfast">
+                <span data-translate="breakfast">Śniadanie</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="breakfast-accordion"></div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="bakery">
+                <span data-translate="bakery">Piekarnia</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="bakery-accordion"></div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="desserts">
+                <span data-translate="desserts">Desery</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="desserts-accordion"></div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="coffee">
+                <span data-translate="coffee">Kawa</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="coffee-accordion"></div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="lemonades">
+                <span data-translate="lemonades">Lemoniady</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="lemonades-accordion"></div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="cocktails">
+                <span data-translate="cocktails">Koktajle</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="cocktails-accordion"></div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="drinks">
+                <span data-translate="drinks">Napoje</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="drinks-accordion"></div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" data-accordion="sides">
+                <span data-translate="sides">Dodatki</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content" id="sides-accordion"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-content">
+          <h2 class="section-title" data-translate="aboutTitle">O Nas</h2>
+          <p data-translate="aboutText1">
+            SHAFRAN to autentyczna restauracja uzbecka, która przenosi gości w
+            kulinarną podróż do serca Azji Centralnej. Nasze dania
+            przygotowywane są według tradycyjnych receptur, z wykorzystaniem
+            oryginalnych przypraw i technik gotowania.
+          </p>
+          <p data-translate="aboutText2">
+            Specjalizujemy się w tradycyjnych daniach kuchni uzbeckiej, takich
+            jak pilaw, manti, lagman i szaszłyki. Każde danie przygotowywane
+            jest z najwyższej jakości składników, aby zapewnić autentyczny smak
+            i aromat.
+          </p>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">12+</div>
+              <div class="stat-label" data-translate="yearsExperience">
+                Lat doświadczenia
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">50+</div>
+              <div class="stat-label" data-translate="authenticDishes">
+                Autentycznych dań
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title" data-translate="contactTitle">Kontakt</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>SHAFRAN</h3>
+            <div class="contact-info">
+              <p data-translate="address">
+                Adres: al. Jana Pawła II 61/164, 01-031 Warszawa, Poland
+              </p>
+              <p data-translate="phone">Telefon: +48 123 456 789</p>
+              <p data-translate="hours">Godziny otwarcia: Pon-Nd 09:00-00:00</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="map-placeholder" data-translate="mapPlaceholder">
+              Mapa
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">SHAFRAN</div>
+            <p class="copyright" data-translate="copyright">
+              © 2025 SHAFRAN. Wszelkie prawa zastrzeżone.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="#" data-translate="facebook">Facebook</a>
+            <a href="#" data-translate="instagram">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
